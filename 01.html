@@ -6,21 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .list{}
+    /* .list{} */
     .list div{
       background-color: #ccc;
       margin-bottom: 10px;
-      padding-left: 1em;
+      padding-left: 2em;
+      text-indent: -2em;
+    }
+    div{
+      display: block;
+    }
+    .list div::before{
+      content: "．";
+      /* 跟text-indent效果相同? */
+      margin-left: 1em;
+      background-color: red;
+    }
+    .box{
+      width: 1200px;
+      height: 300px;
+      background-color: pink;
+      background-image: url('https://cdn.bella.tw/files-20210831/original.jpg');
+      background-repeat: no-repeat;
+      background-size: 100px 100px;
+      /* background-image  linear-gradient( 角度方向, 色彩 位置, 色彩 位置); */
       
     }
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-image:linear-gradient(to top right, pink 0% , beige 80%);
+    }
+
   </style>
 </head>
 <body>
   <div class="list">
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quam veritatis dignissimos sint, eos quas praesentium voluptates earum voluptatem hic tempore nam saepe incidunt accusamus maiores perferendis totam impedit dolorum.</div>
     <div class="list">list</div>
     <div class="list">list</div>
     <div class="list">list</div>
     <div class="list">list</div>
+  </div>
+  <div class="box"></div>
+  <div class="background-image">
+    <div class="box1"></div>
   </div>
 </body>
 </html>
