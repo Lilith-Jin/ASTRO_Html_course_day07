@@ -20,11 +20,36 @@
       background-color: salmon;
       margin-top: 100px;
     }
+    .wrap{
+      /* width: 960px; */
+      background-color: sandybrown;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .item{
+      /* width: 290px; */
+      width: 30.208333%; /*rwd要用百分比才不會壞*/
+      height: 200px;
+      background-color: salmon;
+      margin: 10px 1.562500%;
+    }
+    .img{
+      width: 100%;
+    }
   </style>
 </head>
 <body>
   <div class="papa">
     <div class="child"></div>
+  </div>
+  <div class="wrap">
+    <div class="item">
+      <img src="https://picsum.photos/290/100/?random=1">
+    </div>
+    <div class="item"></div>
+    <div class="item"></div>
   </div>
 </body>
 </html>
