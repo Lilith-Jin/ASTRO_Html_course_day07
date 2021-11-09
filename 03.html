@@ -11,9 +11,20 @@
       height: 300px;
       background-color: pink;
     }
-
-    @media screen and (min-width: 800px){
+    /* 符合條件時，後面覆蓋前面，條件相同時比較優先權 */
+    /* pad 直 */
+    @media screen and (min-width: 768px){
       .box{background-color: royalblue;}
+    }
+
+    /* pad 橫 & pro 直 */
+    @media screen and (min-width: 1024px){
+      .box{background-color:yellow;}
+    }
+
+   /* pad pro 橫 & 桌 */
+   @media screen and (min-width: 1200px){
+      .box{background-color: burlywood;}
     }
       
   
